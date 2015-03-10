@@ -9,11 +9,18 @@
 /* Begin PBXBuildFile section */
 		DA4571BE1AAE5BBD00418C8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4571BD1AAE5BBD00418C8C /* AppDelegate.swift */; };
 		DA4571C11AAE5BBD00418C8C /* Objective.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA4571BF1AAE5BBD00418C8C /* Objective.xcdatamodeld */; };
-		DA4571C31AAE5BBD00418C8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4571C21AAE5BBD00418C8C /* ViewController.swift */; };
 		DA4571C61AAE5BBD00418C8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA4571C41AAE5BBD00418C8C /* Main.storyboard */; };
 		DA4571C81AAE5BBD00418C8C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA4571C71AAE5BBD00418C8C /* Images.xcassets */; };
 		DA4571CB1AAE5BBD00418C8C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA4571C91AAE5BBD00418C8C /* LaunchScreen.xib */; };
 		DA4571D71AAE5BBD00418C8C /* ObjectiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4571D61AAE5BBD00418C8C /* ObjectiveTests.swift */; };
+		DA4571E31AAE6A3D00418C8C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4571E21AAE6A3D00418C8C /* HomeViewController.swift */; };
+		DA4571E51AAE6B1B00418C8C /* BezierPathsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4571E41AAE6B1B00418C8C /* BezierPathsView.swift */; };
+		DA4571E71AAE6C3000418C8C /* SleepingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4571E61AAE6C3000418C8C /* SleepingTableViewController.swift */; };
+		DA4571E91AAE6C5200418C8C /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4571E81AAE6C5200418C8C /* SettingsTableViewController.swift */; };
+		DA4571EB1AAE6D3100418C8C /* TutorialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4571EA1AAE6D3100418C8C /* TutorialPageViewController.swift */; };
+		DA4571ED1AAE8BD100418C8C /* ObjectiveTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4571EC1AAE8BD100418C8C /* ObjectiveTabBarViewController.swift */; };
+		DA4571EF1AAE96A900418C8C /* TutorialContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4571EE1AAE96A900418C8C /* TutorialContentViewController.swift */; };
+		DA4571F11AAE9B2300418C8C /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4571F01AAE9B2300418C8C /* TutorialViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,13 +38,20 @@
 		DA4571BC1AAE5BBD00418C8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA4571BD1AAE5BBD00418C8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA4571C01AAE5BBD00418C8C /* Objective.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Objective.xcdatamodel; sourceTree = "<group>"; };
-		DA4571C21AAE5BBD00418C8C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DA4571C51AAE5BBD00418C8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DA4571C71AAE5BBD00418C8C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DA4571CA1AAE5BBD00418C8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		DA4571D01AAE5BBD00418C8C /* ObjectiveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjectiveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA4571D51AAE5BBD00418C8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA4571D61AAE5BBD00418C8C /* ObjectiveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveTests.swift; sourceTree = "<group>"; };
+		DA4571E21AAE6A3D00418C8C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DA4571E41AAE6B1B00418C8C /* BezierPathsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BezierPathsView.swift; sourceTree = "<group>"; };
+		DA4571E61AAE6C3000418C8C /* SleepingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepingTableViewController.swift; sourceTree = "<group>"; };
+		DA4571E81AAE6C5200418C8C /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		DA4571EA1AAE6D3100418C8C /* TutorialPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TutorialPageViewController.swift; path = ../TutorialPageViewController.swift; sourceTree = "<group>"; };
+		DA4571EC1AAE8BD100418C8C /* ObjectiveTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectiveTabBarViewController.swift; sourceTree = "<group>"; };
+		DA4571EE1AAE96A900418C8C /* TutorialContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialContentViewController.swift; sourceTree = "<group>"; };
+		DA4571F01AAE9B2300418C8C /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,12 +93,16 @@
 		DA4571BA1AAE5BBD00418C8C /* Objective */ = {
 			isa = PBXGroup;
 			children = (
-				DA4571BD1AAE5BBD00418C8C /* AppDelegate.swift */,
-				DA4571C21AAE5BBD00418C8C /* ViewController.swift */,
 				DA4571C41AAE5BBD00418C8C /* Main.storyboard */,
-				DA4571C71AAE5BBD00418C8C /* Images.xcassets */,
-				DA4571C91AAE5BBD00418C8C /* LaunchScreen.xib */,
-				DA4571BF1AAE5BBD00418C8C /* Objective.xcdatamodeld */,
+				DA4571F01AAE9B2300418C8C /* TutorialViewController.swift */,
+				DA4571E81AAE6C5200418C8C /* SettingsTableViewController.swift */,
+				DA4571E61AAE6C3000418C8C /* SleepingTableViewController.swift */,
+				DA4571E41AAE6B1B00418C8C /* BezierPathsView.swift */,
+				DA4571E21AAE6A3D00418C8C /* HomeViewController.swift */,
+				DA4571EA1AAE6D3100418C8C /* TutorialPageViewController.swift */,
+				DA4571EE1AAE96A900418C8C /* TutorialContentViewController.swift */,
+				DA4571BD1AAE5BBD00418C8C /* AppDelegate.swift */,
+				DA4571EC1AAE8BD100418C8C /* ObjectiveTabBarViewController.swift */,
 				DA4571BB1AAE5BBD00418C8C /* Supporting Files */,
 			);
 			path = Objective;
@@ -93,6 +111,9 @@
 		DA4571BB1AAE5BBD00418C8C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DA4571C91AAE5BBD00418C8C /* LaunchScreen.xib */,
+				DA4571BF1AAE5BBD00418C8C /* Objective.xcdatamodeld */,
+				DA4571C71AAE5BBD00418C8C /* Images.xcassets */,
 				DA4571BC1AAE5BBD00418C8C /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -215,9 +236,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA4571C31AAE5BBD00418C8C /* ViewController.swift in Sources */,
 				DA4571BE1AAE5BBD00418C8C /* AppDelegate.swift in Sources */,
+				DA4571E51AAE6B1B00418C8C /* BezierPathsView.swift in Sources */,
+				DA4571F11AAE9B2300418C8C /* TutorialViewController.swift in Sources */,
+				DA4571EB1AAE6D3100418C8C /* TutorialPageViewController.swift in Sources */,
+				DA4571E71AAE6C3000418C8C /* SleepingTableViewController.swift in Sources */,
+				DA4571ED1AAE8BD100418C8C /* ObjectiveTabBarViewController.swift in Sources */,
+				DA4571EF1AAE96A900418C8C /* TutorialContentViewController.swift in Sources */,
 				DA4571C11AAE5BBD00418C8C /* Objective.xcdatamodeld in Sources */,
+				DA4571E31AAE6A3D00418C8C /* HomeViewController.swift in Sources */,
+				DA4571E91AAE6C5200418C8C /* SettingsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
