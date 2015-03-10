@@ -14,18 +14,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    let objectiveColor = UIColor(red: 63/256, green: 195/256, blue: 128/256, alpha: 1.0)
+    let objectiveColor = UIColor(red: 177/255, green: 218/255, blue: 206/255, alpha: 1.0)
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Customize UI colors
-        //UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.whiteColor()], forState:.Normal)
         UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: objectiveColor], forState:.Selected)
         UITabBar.appearance().selectedImageTintColor = objectiveColor
         UINavigationBar.appearance().barTintColor = objectiveColor
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-        //UITabBarItem.appearance().
+        UIPageControl.appearance().pageIndicatorTintColor = UIColor.grayColor()
+        UIPageControl.appearance().currentPageIndicatorTintColor = objectiveColor
         return true
     }
 

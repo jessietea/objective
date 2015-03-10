@@ -21,6 +21,13 @@
 		DA4571ED1AAE8BD100418C8C /* ObjectiveTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4571EC1AAE8BD100418C8C /* ObjectiveTabBarViewController.swift */; };
 		DA4571EF1AAE96A900418C8C /* TutorialContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4571EE1AAE96A900418C8C /* TutorialContentViewController.swift */; };
 		DA4571F11AAE9B2300418C8C /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4571F01AAE9B2300418C8C /* TutorialViewController.swift */; };
+		DA6078851AAEE6D2008BBA11 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6078841AAEE6D2008BBA11 /* WelcomeViewController.swift */; };
+		DA6078871AAEE6F3008BBA11 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6078861AAEE6F3008BBA11 /* SetupViewController.swift */; };
+		DA60788D1AAEF525008BBA11 /* CurrencyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA60788C1AAEF525008BBA11 /* CurrencyInfo.swift */; };
+		DA6078931AAEFFFA008BBA11 /* beer.svg in Resources */ = {isa = PBXBuildFile; fileRef = DA6078921AAEFFFA008BBA11 /* beer.svg */; };
+		DA6078971AAF0009008BBA11 /* sushi.svg in Resources */ = {isa = PBXBuildFile; fileRef = DA6078941AAF0009008BBA11 /* sushi.svg */; };
+		DA6078981AAF0009008BBA11 /* coffee.svg in Resources */ = {isa = PBXBuildFile; fileRef = DA6078951AAF0009008BBA11 /* coffee.svg */; };
+		DA6078991AAF0009008BBA11 /* ice cream.svg in Resources */ = {isa = PBXBuildFile; fileRef = DA6078961AAF0009008BBA11 /* ice cream.svg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +59,14 @@
 		DA4571EC1AAE8BD100418C8C /* ObjectiveTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectiveTabBarViewController.swift; sourceTree = "<group>"; };
 		DA4571EE1AAE96A900418C8C /* TutorialContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialContentViewController.swift; sourceTree = "<group>"; };
 		DA4571F01AAE9B2300418C8C /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		DA6078841AAEE6D2008BBA11 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		DA6078861AAEE6F3008BBA11 /* SetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
+		DA60788C1AAEF525008BBA11 /* CurrencyInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CurrencyInfo.swift; path = ../CurrencyInfo.swift; sourceTree = "<group>"; };
+		DA6078921AAEFFFA008BBA11 /* beer.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = beer.svg; sourceTree = "<group>"; };
+		DA6078941AAF0009008BBA11 /* sushi.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sushi.svg; sourceTree = "<group>"; };
+		DA6078951AAF0009008BBA11 /* coffee.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = coffee.svg; sourceTree = "<group>"; };
+		DA6078961AAF0009008BBA11 /* ice cream.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "ice cream.svg"; sourceTree = "<group>"; };
+		DA60789A1AAF04C5008BBA11 /* Objective-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Objective-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +90,10 @@
 		DA4571AF1AAE5BBD00418C8C = {
 			isa = PBXGroup;
 			children = (
+				DA6078941AAF0009008BBA11 /* sushi.svg */,
+				DA6078951AAF0009008BBA11 /* coffee.svg */,
+				DA6078961AAF0009008BBA11 /* ice cream.svg */,
+				DA6078921AAEFFFA008BBA11 /* beer.svg */,
 				DA4571BA1AAE5BBD00418C8C /* Objective */,
 				DA4571D31AAE5BBD00418C8C /* ObjectiveTests */,
 				DA4571B91AAE5BBD00418C8C /* Products */,
@@ -93,7 +112,10 @@
 		DA4571BA1AAE5BBD00418C8C /* Objective */ = {
 			isa = PBXGroup;
 			children = (
+				DA60788C1AAEF525008BBA11 /* CurrencyInfo.swift */,
 				DA4571C41AAE5BBD00418C8C /* Main.storyboard */,
+				DA6078861AAEE6F3008BBA11 /* SetupViewController.swift */,
+				DA6078841AAEE6D2008BBA11 /* WelcomeViewController.swift */,
 				DA4571F01AAE9B2300418C8C /* TutorialViewController.swift */,
 				DA4571E81AAE6C5200418C8C /* SettingsTableViewController.swift */,
 				DA4571E61AAE6C3000418C8C /* SleepingTableViewController.swift */,
@@ -111,6 +133,7 @@
 		DA4571BB1AAE5BBD00418C8C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DA60789A1AAF04C5008BBA11 /* Objective-Bridging-Header.h */,
 				DA4571C91AAE5BBD00418C8C /* LaunchScreen.xib */,
 				DA4571BF1AAE5BBD00418C8C /* Objective.xcdatamodeld */,
 				DA4571C71AAE5BBD00418C8C /* Images.xcassets */,
@@ -216,9 +239,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA6078981AAF0009008BBA11 /* coffee.svg in Resources */,
+				DA6078931AAEFFFA008BBA11 /* beer.svg in Resources */,
 				DA4571C61AAE5BBD00418C8C /* Main.storyboard in Resources */,
 				DA4571CB1AAE5BBD00418C8C /* LaunchScreen.xib in Resources */,
+				DA6078971AAF0009008BBA11 /* sushi.svg in Resources */,
 				DA4571C81AAE5BBD00418C8C /* Images.xcassets in Resources */,
+				DA6078991AAF0009008BBA11 /* ice cream.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,7 +265,10 @@
 			files = (
 				DA4571BE1AAE5BBD00418C8C /* AppDelegate.swift in Sources */,
 				DA4571E51AAE6B1B00418C8C /* BezierPathsView.swift in Sources */,
+				DA6078851AAEE6D2008BBA11 /* WelcomeViewController.swift in Sources */,
 				DA4571F11AAE9B2300418C8C /* TutorialViewController.swift in Sources */,
+				DA60788D1AAEF525008BBA11 /* CurrencyInfo.swift in Sources */,
+				DA6078871AAEE6F3008BBA11 /* SetupViewController.swift in Sources */,
 				DA4571EB1AAE6D3100418C8C /* TutorialPageViewController.swift in Sources */,
 				DA4571E71AAE6C3000418C8C /* SleepingTableViewController.swift in Sources */,
 				DA4571ED1AAE8BD100418C8C /* ObjectiveTabBarViewController.swift in Sources */,
@@ -370,9 +400,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Objective/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Objective/Objective-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -380,9 +413,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Objective/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Objective/Objective-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -439,6 +474,7 @@
 				DA4571DC1AAE5BBD00418C8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DA4571DD1AAE5BBD00418C8C /* Build configuration list for PBXNativeTarget "ObjectiveTests" */ = {
 			isa = XCConfigurationList;
@@ -447,6 +483,7 @@
 				DA4571DF1AAE5BBD00418C8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

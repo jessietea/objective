@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TutorialViewController: UIViewController, UIPageViewControllerDataSource {
+class TutorialViewController: UIViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +37,6 @@ class TutorialViewController: UIViewController, UIPageViewControllerDataSource {
     }
     
     func reset() {
-        /* Getting the page View controller */
         pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("TutorialPageViewController") as UIPageViewController
         self.pageViewController.dataSource = self
         
@@ -83,16 +82,20 @@ class TutorialViewController: UIViewController, UIPageViewControllerDataSource {
         }
         let pageContentViewController = self.storyboard?.instantiateViewControllerWithIdentifier(self.screens[index]) as TutorialContentViewController
         pageContentViewController.pageIndex = index
-        //println(pageContentViewController)
         return pageContentViewController
     }
     
     func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
-        return self.screens.count
+        println(screens.count)
+        return screens.count
     }
     
     func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
-        return 0
+        if let viewController = pageViewController.viewControllers.last as? TutorialContentViewController {
+            return viewController.pageIndex!
+        } else {
+            return 0
+        }
     }
 
     
