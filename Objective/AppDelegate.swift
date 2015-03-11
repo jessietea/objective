@@ -8,11 +8,18 @@
 
 import UIKit
 import CoreData
+import CoreMotion
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    let currencyInfo = CurrencyInfo()
+    
+    struct Motion {
+        static let Manager = CMMotionManager()
+    }
     
     let objectiveColor = UIColor(red: 177/255, green: 218/255, blue: 206/255, alpha: 1.0)
 

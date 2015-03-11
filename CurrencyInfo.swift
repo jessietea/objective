@@ -11,17 +11,15 @@ import UIKit
 
 class CurrencyInfo {
     
-    struct Currency {
-        var name: String
-        //var image: UIImage
-        var paths: [UIBezierPath]
-    }
-    
-    var currencies: [String : Currency] = [String : Currency]()
+    var currencies: [String] = [String]()
     
     init() {
-        func learnCurrency(name: String, paths: [UIBezierPath]) {
-            currencies[name] = Currency(name: name, paths: paths)
+        func learnCurrency(name: String) {
+            currencies.append(name)
         }
+        learnCurrency("coffee")
+        learnCurrency("beer")
+        learnCurrency("sushi")
+        learnCurrency("ice cream")
     }
 }
