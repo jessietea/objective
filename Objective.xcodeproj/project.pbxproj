@@ -25,7 +25,7 @@
 		DA6078871AAEE6F3008BBA11 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6078861AAEE6F3008BBA11 /* SetupViewController.swift */; };
 		DA60788D1AAEF525008BBA11 /* CurrencyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA60788C1AAEF525008BBA11 /* CurrencyInfo.swift */; };
 		DA6078AD1AAF98D6008BBA11 /* ObjectPlayBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6078AC1AAF98D6008BBA11 /* ObjectPlayBehavior.swift */; };
-		DA6078AF1AB047C6008BBA11 /* ObjectPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6078AE1AB047C6008BBA11 /* ObjectPickerView.swift */; };
+		DA6078B11AB05157008BBA11 /* ConvertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6078B01AB05157008BBA11 /* ConvertViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +62,7 @@
 		DA60788C1AAEF525008BBA11 /* CurrencyInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CurrencyInfo.swift; path = ../CurrencyInfo.swift; sourceTree = "<group>"; };
 		DA60789A1AAF04C5008BBA11 /* Objective-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Objective-Bridging-Header.h"; sourceTree = "<group>"; };
 		DA6078AC1AAF98D6008BBA11 /* ObjectPlayBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectPlayBehavior.swift; sourceTree = "<group>"; };
-		DA6078AE1AB047C6008BBA11 /* ObjectPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectPickerView.swift; sourceTree = "<group>"; };
+		DA6078B01AB05157008BBA11 /* ConvertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConvertViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +106,7 @@
 			children = (
 				DA60788C1AAEF525008BBA11 /* CurrencyInfo.swift */,
 				DA4571C41AAE5BBD00418C8C /* Main.storyboard */,
-				DA6078AE1AB047C6008BBA11 /* ObjectPickerView.swift */,
+				DA6078B01AB05157008BBA11 /* ConvertViewController.swift */,
 				DA6078861AAEE6F3008BBA11 /* SetupViewController.swift */,
 				DA6078841AAEE6D2008BBA11 /* WelcomeViewController.swift */,
 				DA4571F01AAE9B2300418C8C /* TutorialViewController.swift */,
@@ -255,10 +255,10 @@
 			files = (
 				DA4571BE1AAE5BBD00418C8C /* AppDelegate.swift in Sources */,
 				DA4571E51AAE6B1B00418C8C /* BezierPathsView.swift in Sources */,
+				DA6078B11AB05157008BBA11 /* ConvertViewController.swift in Sources */,
 				DA6078851AAEE6D2008BBA11 /* WelcomeViewController.swift in Sources */,
 				DA4571F11AAE9B2300418C8C /* TutorialViewController.swift in Sources */,
 				DA60788D1AAEF525008BBA11 /* CurrencyInfo.swift in Sources */,
-				DA6078AF1AB047C6008BBA11 /* ObjectPickerView.swift in Sources */,
 				DA6078AD1AAF98D6008BBA11 /* ObjectPlayBehavior.swift in Sources */,
 				DA6078871AAEE6F3008BBA11 /* SetupViewController.swift in Sources */,
 				DA4571EB1AAE6D3100418C8C /* TutorialPageViewController.swift in Sources */,

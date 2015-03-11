@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UIDynamicAnimatorDelegate {
+class HomeViewController: UIViewController, UIDynamicAnimatorDelegate, UIPopoverPresentationControllerDelegate {
     
     private struct UserStorageConstants {
         static let Name = "Name"
@@ -23,7 +23,7 @@ class HomeViewController: UIViewController, UIDynamicAnimatorDelegate {
     var currencyCost: Double?
     var currencyName: String?
     var goalNumObjects: Int? = 0
-    var currentNumObjects: Int? = 0
+    var currentNumObjects: Int? = 47
     var objectImage: UIImage?
     var baseObjectSize: CGSize {
         let imageSize = objectImage!.size
@@ -55,19 +55,13 @@ class HomeViewController: UIViewController, UIDynamicAnimatorDelegate {
         objectPlayBehavior.addBarrier(UIBezierPath(rect: homeView.bounds), named: "Screen")
         objectPlayBehavior.collider.translatesReferenceBoundsIntoBoundary = true
         objectImage = UIImage(named: "coffee")
-        if let user = defaults.objectForKey(UserStorageConstants.Name) as? Int {
+        if let user = defaults.objectForKey(UserStorageConstants.Name) as? String {
             // load home page
             update()
             drawAllObjects()
         } else {
             performSegueWithIdentifier("Tutorial", sender: self)
         }
-        // If the user has not used the app before (NSUserDefaults empty)
-        // segue to the tutorial
-        // Else, add in currencies
-//        objectImage = UIImage(named: "coffee")
-//        goalNumObjects = 0
-//        currentNumObjects = 46
         
     }
     
@@ -85,6 +79,7 @@ class HomeViewController: UIViewController, UIDynamicAnimatorDelegate {
             }
             if let currencyNameValue = defaults.objectForKey(UserStorageConstants.CurrencyName) as? String {
                 currencyName = currencyNameValue
+                objectImage = UIImage(named: currencyName!)
             }
         }
         if let currentObjects = defaults.objectForKey(UserStorageConstants.CurrentSaved) as? Int {
@@ -92,17 +87,7 @@ class HomeViewController: UIViewController, UIDynamicAnimatorDelegate {
         }
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        objectPlayBehavior.addBarrier(UIBezierPath(rect: homeView.bounds), named: "Screen")
-        let motionManager = AppDelegate.Motion.Manager
-        if motionManager.accelerometerAvailable {
-            motionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.mainQueue()) { (data, error) -> Void in
-                self.objectPlayBehavior.gravity.gravityDirection = CGVector(dx: data.acceleration.x, dy: -data.acceleration.y)
-                self.objectPlayBehavior.gravity.magnitude = 0.5
-            }
-        }
-        
+    func updateLabel() {
         // Attributed string in case I want to customize it more later
         var text: NSMutableAttributedString
         if currentNumObjects != nil && goalNumObjects != nil {
@@ -117,6 +102,20 @@ class HomeViewController: UIViewController, UIDynamicAnimatorDelegate {
         objectCountLabel.attributedText = text
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        objectPlayBehavior.addBarrier(UIBezierPath(rect: homeView.bounds), named: "Screen")
+        let motionManager = AppDelegate.Motion.Manager
+        if motionManager.accelerometerAvailable {
+            motionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.mainQueue()) { (data, error) -> Void in
+                self.objectPlayBehavior.gravity.gravityDirection = CGVector(dx: data.acceleration.x, dy: -data.acceleration.y)
+                self.objectPlayBehavior.gravity.magnitude = 0.5
+            }
+        }
+        
+        updateLabel()
+    }
+    
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         AppDelegate.Motion.Manager.stopAccelerometerUpdates()
@@ -125,22 +124,15 @@ class HomeViewController: UIViewController, UIDynamicAnimatorDelegate {
     func drawAllObjects() {
         var numObjects = currentNumObjects!
         var power = Int(pow(10, floor(log10(Double(numObjects)))))
-        //println(power)
         while numObjects > 0 {
             let count = numObjects / power
-            //println("count")
-            //println(count)
             let multiple = Int(floor(log10(Double(numObjects)))) + 1
             let currentSize = CGSize(width: Int(baseObjectSize.width) * multiple, height: Int(baseObjectSize.height) * multiple)
             for i in 1...count {
                 addObjectToScreen(currentSize)
             }
             numObjects = numObjects % power
-            //println("numobjects")
-            //println(numObjects)
             power = Int(pow(10, floor(log10(Double(numObjects)))))
-            //println("power")
-            //println(power)
         }
     }
 
@@ -155,9 +147,42 @@ class HomeViewController: UIViewController, UIDynamicAnimatorDelegate {
         objectPlayBehavior.addObject(objectView)
     }
 
-    /*
+    
     // MARK: - Navigation
-
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "convertSegue" {
+            if let cvc = segue.destinationViewController as? ConvertViewController {
+                cvc.modalPresentationStyle = UIModalPresentationStyle.Popover
+                cvc.popoverPresentationController!.delegate = self
+                cvc.currencyImage = objectImage
+                cvc.currencyCost = currencyCost!
+            }
+        }
+    }
+    
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+        return UIModalPresentationStyle.None
+    }
+    
+    // Mark: - Money functions
+    
+    func makeDeposit(cost: Double) {
+        println("fuck")
+        // add value
+        let amountSaved = Int(floor(cost / currencyCost!))
+        currentNumObjects = currentNumObjects! + amountSaved
+        // update NSUserDefaults
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(currentNumObjects, forKey: UserStorageConstants.CurrentSaved)
+        updateLabel()
+        // animate adding more
+        for i in 1...amountSaved {
+            addObjectToScreen(baseObjectSize)
+        }
+    }
+    
+    /*
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
